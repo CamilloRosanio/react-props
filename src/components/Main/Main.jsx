@@ -4,9 +4,9 @@ import postsData from "../../data/postsData.jsx";
 
 function Main() {
 
-    // const PublishedPosts = posts.filter(post => post.published === true);
+    const PublishedPosts = postsData.filter(post => post.published == true);
 
-    console.log(postsData);
+    console.log(PublishedPosts);
 
     return (
         <>
@@ -14,13 +14,15 @@ function Main() {
                 <div className="container">
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="gallery d-flex justify-content-center">
-                            <div className="row">
-                                <MyCard
-                                    prop1=""
-                                    prop2=""
-                                    prop3=""
-                                    prop4=""
-                                />
+                            <div className="row g-4">
+                                {PublishedPosts.map((post) => (
+                                    <MyCard
+                                        id={post.id}
+                                        title={post.title}
+                                        image={post.image}
+                                        content={post.content}
+                                    />
+                                ))}
                             </div>
                         </div>
                     </div>
