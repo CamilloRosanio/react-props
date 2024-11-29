@@ -1,0 +1,53 @@
+/* CUSTOM VARIABLES */
+
+:root {
+  --height_header: 80px;
+  --height_footer: 80px;
+  --height_main: calc(100vh - (var(--height_header)) - (var(--height_footer)));
+}
+
+
+
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* GENERAL */
+
+body {
+  background-color: rgb(228, 228, 228);
+}
+
+header {
+  height: var(--height_header);
+}
+
+main {
+  /* height: var(--height_main);
+  overflow: auto; */
+
+  padding-bottom: 3rem;
+}
+
+footer {
+  height: var(--height_footer);
+}
+
+.gallery {
+  width: 70%;
+}
+
+
+
+/* DEBUG */
+
+.debug {
+  background-color: rgb(180, 255, 161);
+  border: 1px dashed black;
+}

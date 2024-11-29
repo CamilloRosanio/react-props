@@ -1,0 +1,17 @@
+.MyCard {
+    background-color: white;
+    border-radius: 15px;
+    max-width: 600px;
+}
+
+
+/* LE IMMAGINI ESCONO DAI CONTENITORI CON BORDER RADIUS.
+Per risolvere si danno regole di reset alle immagini come "overflow: hidden;" e "width: 100%;" */
+.MyCard img {
+    overflow: hidden;
+    width: 100%;
+}
+
+.contentContainer {
+    padding: 25px;
+}
