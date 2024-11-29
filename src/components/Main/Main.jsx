@@ -1,8 +1,12 @@
 import MyCard from "../MyCard/MyCard.jsx";
-import posts from '../../data/postsData.jsx';
+import postsData from "../../data/postsData.jsx";
 
 
 function Main() {
+
+    // const PublishedPosts = posts.filter(post => post.published === true);
+
+    console.log(postsData);
 
     return (
         <>
@@ -11,7 +15,12 @@ function Main() {
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="gallery d-flex justify-content-center">
                             <div className="row">
-                                <MyCard />
+                                <MyCard
+                                    prop1=""
+                                    prop2=""
+                                    prop3=""
+                                    prop4=""
+                                />
                             </div>
                         </div>
                     </div>
