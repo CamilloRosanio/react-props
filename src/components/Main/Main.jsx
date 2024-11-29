@@ -8,10 +8,33 @@ function Main() {
 
     console.log(PublishedPosts);
 
+    const tagList = [];
+
+    for (let i = 0; i < PublishedPosts.length; i++) {
+        let currentPost = PublishedPosts[i];
+
+        currentPost.tags.forEach(tag => {
+            if (!tagList.includes(tag)) {
+                tagList.push(tag);
+            }
+        })
+
+    }
+
+    console.log(tagList);
+
+
     return (
         <>
             <main>
                 <div className="container">
+                    <ul className="tagList">
+                        {tagList.map(tag => (
+                            <li className={'postTag ' + tag}>
+                                {tag}
+                            </li>
+                        ))}
+                    </ul>
                     <div className="d-flex justify-content-center align-items-center">
                         <div className="gallery d-flex justify-content-center">
                             <div className="row g-4">
@@ -21,6 +44,7 @@ function Main() {
                                         title={post.title}
                                         image={post.image}
                                         content={post.content}
+                                        tags={post.tags}
                                     />
                                 ))}
                             </div>

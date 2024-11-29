@@ -1,6 +1,7 @@
 .MyCard {
     background-color: white;
     border-radius: 1rem;
+    height: 100%;
 }
 
 
@@ -13,4 +14,12 @@ Per risolvere si danno regole di reset alle immagini come "overflow: hidden;" e 
 
 .contentContainer {
     padding: 25px;
+}
+
+.tagContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+    ;
 }
